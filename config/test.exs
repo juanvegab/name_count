@@ -17,7 +17,7 @@ config :name_count, NameCount.Repo,
 # you can enable the server option below.
 config :name_count, NameCountWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "V/DndoIvxflEwjJlTGzqodlEHmgG4SFYp4gg4OUQjCpvRn4jz5cjjbkcLxd/woVl",
+  secret_key_base: "43fejYEIezcB8XhSBR9SA1nlR0UmaQ1wFuWG8dumsfgW2P6co1iBH/LjM4sA3kBg",
   server: false
 
 # In test we don't send emails.

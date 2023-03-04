@@ -1,8 +1,8 @@
-defmodule NameCount.Repo.Migrations.CreateEntries do
+defmodule NameCount.Repo.Migrations.CreateNames do
   use Ecto.Migration
 
   def change do
-    create table(:entries) do
+    create table(:names) do
       add :name, :string
       add :date, :naive_datetime
 

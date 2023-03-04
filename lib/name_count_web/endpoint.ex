@@ -7,7 +7,7 @@ defmodule NameCountWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_name_count_key",
-    signing_salt: "mDgjsr3J"
+    signing_salt: "cXcEGj1q"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]

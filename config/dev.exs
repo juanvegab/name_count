@@ -24,7 +24,7 @@ config :name_count, NameCountWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "rvfs0edKSPN/erKJeNRFMYzdcudPbBahNiHpPxA9u1XtInW45ObdBhexzBg6iy3o",
+  secret_key_base: "NeUu615jvbqrxIsjOPu8tMQD/Hp7UKgZapjnlgahtB0swqC5bmt0qKn8fLE4X1BT",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}

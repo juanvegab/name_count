@@ -23,6 +23,8 @@ defmodule NameCountWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api", NameCountWeb do
     pipe_through :api
+    resources "/names", NameController, except: [:new, :edit]
+    get "/top/:max_names", CountController, :top
   end
 
   # Enables LiveDashboard only for development

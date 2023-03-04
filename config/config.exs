@@ -15,7 +15,7 @@ config :name_count, NameCountWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: NameCountWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: NameCount.PubSub,
-  live_view: [signing_salt: "Ml3XkhYW"]
+  live_view: [signing_salt: "sTswsC1+"]
 
 # Configures the mailer
 #
