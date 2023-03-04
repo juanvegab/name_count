@@ -17,7 +17,8 @@ defmodule NameCountWeb.Router do
   scope "/", NameCountWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
+    live "/", LivePage
   end
 
   # Other scopes may use custom stacks.

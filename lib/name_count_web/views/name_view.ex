@@ -2,10 +2,6 @@ defmodule NameCountWeb.NameView do
   use NameCountWeb, :view
   alias NameCountWeb.NameView
 
-  # def render("index.json", %{names: names}) do
-  #   %{names: names}
-  # end
-
   def render("index.json", %{names: names}) do
     %{data: render_many(names, NameView, "name.json")}
   end
