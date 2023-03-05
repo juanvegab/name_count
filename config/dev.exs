@@ -27,7 +27,8 @@ config :name_count, NameCountWeb.Endpoint,
   secret_key_base: "NeUu615jvbqrxIsjOPu8tMQD/Hp7UKgZapjnlgahtB0swqC5bmt0qKn8fLE4X1BT",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support

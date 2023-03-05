@@ -10,13 +10,22 @@
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
-    </header>
-    <%= @inner_content %>
+    <div class="flex flex-col h-screen justify-between">
+      <header>
+        <section>
+          <div class="relative">
+            <img src={Routes.static_path(@conn, "/images/abstract-bg.jpg")} alt="Phoenix Framework Logo"/>
+            <div class="absolute top-0 backdrop-blur-sm h-full w-full bg-white/5"></div>
+          </div>
+        </section>
+      </header>
+      <div class="grow flex flex-col px-8 md:px-20 lg:px-30 bg-gray-50 grid-col-1">
+        <div class="bg-white grow">
+          <%= @inner_content %>
+        </div>
+      </div>
+      <footer class="h-20 bg-slate-900">
+      </footer>
+    </div>
   </body>
 </html>
