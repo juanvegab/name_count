@@ -24,7 +24,7 @@ defmodule NameCount.Counts do
   end
 
   @doc """
-  Returns the list of names.
+  Returns the list of names with their count.
 
   ## Examples
 
@@ -33,7 +33,6 @@ defmodule NameCount.Counts do
 
   """
   def count_names!(max_names) do
-    # Repo.all(from n in Name, select: count(n.name, :distinct))
     from(n in Name,
       group_by: n.name,
       select: {n.name, count(n.name)},
@@ -42,6 +41,19 @@ defmodule NameCount.Counts do
     )
     |> Repo.all()
     |> Enum.map(fn {n, c} -> %{name: n, count: c} end)
+  end
+
+  @doc """
+  Returns the count of name.
+
+  ## Examples
+
+      iex> count_name("Juan")
+      10
+
+  """
+  def count_name!(name) do
+    Repo.one(from n in Name, select: count("*"), where: n.name == ^name)
   end
 
   @doc """
