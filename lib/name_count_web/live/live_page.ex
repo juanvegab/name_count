@@ -20,7 +20,7 @@ defmodule NameCountWeb.LivePage do
   end
 
   def handle_event("send", %{"text" => text}, socket) do
-    NameCount.Counts.create_name(%{name: text})
+    NameCount.Counts.create_name(%{name: String.downcase(text)})
     NameCountWeb.Endpoint.broadcast(topic(), "addName", %{name: text})
 
     {:noreply, socket}
@@ -51,7 +51,7 @@ defmodule NameCountWeb.LivePage do
           <ul class="w-2/3 my-4 text-base">
             <%= for n <- @names do %>
               <li class="px-2 flex justify-between odd:bg-white even:bg-slate-100">
-                <span><%= n.name%></span> <span><%= n.count %></span>
+                <span class="capitalize"><%= n.name%></span> <span><%= n.count %></span>
               </li>
             <% end %>
           </ul>
